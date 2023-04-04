@@ -104,6 +104,10 @@ public class Main extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
+        BangChucvu = new javax.swing.JPanel();
+        BangLuong = new javax.swing.JPanel();
+        BangBaohiem = new javax.swing.JPanel();
+        BangThongKe = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -845,6 +849,58 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1.add(BangNV, "card2");
 
+        javax.swing.GroupLayout BangChucvuLayout = new javax.swing.GroupLayout(BangChucvu);
+        BangChucvu.setLayout(BangChucvuLayout);
+        BangChucvuLayout.setHorizontalGroup(
+            BangChucvuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1323, Short.MAX_VALUE)
+        );
+        BangChucvuLayout.setVerticalGroup(
+            BangChucvuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 644, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(BangChucvu, "card4");
+
+        javax.swing.GroupLayout BangLuongLayout = new javax.swing.GroupLayout(BangLuong);
+        BangLuong.setLayout(BangLuongLayout);
+        BangLuongLayout.setHorizontalGroup(
+            BangLuongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1323, Short.MAX_VALUE)
+        );
+        BangLuongLayout.setVerticalGroup(
+            BangLuongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 644, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(BangLuong, "card5");
+
+        javax.swing.GroupLayout BangBaohiemLayout = new javax.swing.GroupLayout(BangBaohiem);
+        BangBaohiem.setLayout(BangBaohiemLayout);
+        BangBaohiemLayout.setHorizontalGroup(
+            BangBaohiemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1323, Short.MAX_VALUE)
+        );
+        BangBaohiemLayout.setVerticalGroup(
+            BangBaohiemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 644, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(BangBaohiem, "card6");
+
+        javax.swing.GroupLayout BangThongKeLayout = new javax.swing.GroupLayout(BangThongKe);
+        BangThongKe.setLayout(BangThongKeLayout);
+        BangThongKeLayout.setHorizontalGroup(
+            BangThongKeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1323, Short.MAX_VALUE)
+        );
+        BangThongKeLayout.setVerticalGroup(
+            BangThongKeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 644, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(BangThongKe, "card7");
+
         javax.swing.GroupLayout QuanlyLayout = new javax.swing.GroupLayout(Quanly);
         Quanly.setLayout(QuanlyLayout);
         QuanlyLayout.setHorizontalGroup(
@@ -1014,9 +1070,13 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BangBaohiem;
+    private javax.swing.JPanel BangChucvu;
+    private javax.swing.JPanel BangLuong;
     private javax.swing.JPanel BangNV;
     private javax.swing.JPanel BangPB;
     private javax.swing.JPanel BangPhongban;
+    private javax.swing.JPanel BangThongKe;
     private javax.swing.JLabel Bangluong;
     private javax.swing.JLabel Baohiem;
     private javax.swing.JLabel Chucvu;
