@@ -16,6 +16,8 @@ public class Main extends javax.swing.JFrame {
     /**
      * Creates new form Main
      */
+    
+    
     public static BBaoHiem baoHiem = new BBaoHiem();
     public static BNhanvien nhanvien = new BNhanvien();
     public  static BPhongban phongban = new BPhongban();
@@ -714,9 +716,9 @@ public class Main extends javax.swing.JFrame {
 
     private void IconBangluongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IconBangluongActionPerformed
         // TODO add your handling code here:
-            hienthi.add(luong, "BLuong");
+            hienthi.add(ctluong, "BChitietLuong");
         CardLayout cardLayout = (CardLayout) hienthi.getLayout();
-        cardLayout.show(hienthi, "BLuong");
+        cardLayout.show(hienthi, "BChitietLuong");
 
     }//GEN-LAST:event_IconBangluongActionPerformed
 
@@ -809,7 +811,7 @@ public class Main extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

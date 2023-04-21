@@ -5,7 +5,7 @@
 package DAO;
 
 import Connect.DBConnection;
-import DTO.BaohiemDTO;
+import DTO.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -33,16 +33,18 @@ public class BaohiemDAO
         ArrayList<BaohiemDTO> baohiemList = baohiemDAO.getBaohiem();
         for (BaohiemDTO pb : baohiemList)
         {
-            System.out.println(pb.getMaBH()+ " "+  pb.getMaNv()+ " "+ pb.getLoaiBH()+ " "+ 
+            System.out.println(pb.getMaBH()+ " "+  pb.getMaNv()+ " "+pb.getTenNvbh()+ " "+ pb.getLoaiBH()+ " "+ 
                                 pb.getNgaycap()+ " "+ pb.getNgayhethan());
         }
-        
+        //" "+ pb.getTenNvbh()+
     }
     public  ArrayList<BaohiemDTO> getBaohiem()
     {
         try {
             conn = DBConnection.getConnection();
-            stmt = conn.prepareStatement("Select * from BaoHiem");
+            stmt = conn.prepareStatement("select b.MaBH,b.MaNv,n.TenNv, b.LoaiBH,b.NgayCap,b.NgayHetHan\n" +
+                        "from BaoHiem b\n" +
+                        "join Nhanvien n on b.MaNv = n.MaNv ");
             ArrayList<BaohiemDTO> baohiemDAO = new ArrayList();
             rs = stmt.executeQuery();
             
@@ -50,6 +52,7 @@ public class BaohiemDAO
             {
                 baohiemDAO.add(new BaohiemDTO( rs.getString("MaBH" ),
                         rs.getString("MaNv" ),
+                        rs.getString("TenNv"),
                         rs.getString("LoaiBH" ),
                         rs.getDate("NgayCap" ),
                         rs.getDate("NgayHetHan" )));        
@@ -74,12 +77,13 @@ public class BaohiemDAO
 
             
             conn = DBConnection.getConnection();
-            stmt = conn.prepareStatement(" Insert into Baohiem (MaBH, MaNv, LoaiBH, NgayCap, NgayHetHan )VALUES ( ? ,?,?,?,?)");
+            stmt = conn.prepareStatement("INSERT INTO Baohiem (MaBH, MaNv, LoaiBH, NgayCap, NgayHetHan) " +
+                              "VALUES (?, ?, ?, ?, ?)");
             stmt.setString(1, baohiem.getMaBH());
             stmt.setString(2, baohiem.getMaNv());
             stmt.setString(3, baohiem.getLoaiBH());
             stmt.setDate(4, sqlNgayCap);
-            stmt.setDate(5, sqlNgayhethan );
+            stmt.setDate(5, sqlNgayhethan);
             
             stmt.executeUpdate();
 

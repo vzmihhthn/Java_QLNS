@@ -73,7 +73,8 @@ public class BPhongban extends javax.swing.JPanel {
      public void setPBData(ArrayList<PhongBanDTO> departments)
      {
             for (PhongBanDTO department : departments) {
-                defaultTableModel.addRow(new Object[]{
+                defaultTableModel.addRow(new Object[]
+                {
                     department.getMaPB(),
                     department.getTenPB(),
                     department.getSoDienThoai()
@@ -381,7 +382,7 @@ public class BPhongban extends javax.swing.JPanel {
 
     private void ThembtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThembtActionPerformed
         if ("".equals(MaPB.getText()) ||
-                "".equals(TenPB.getText())) {
+                "".trim().equals(TenPB.getText())) {
                 JOptionPane.showMessageDialog(this, 
                         "Không được bỏ trống dữ liệu nhập vào !!!", "Lỗi", 
                         JOptionPane.ERROR_MESSAGE);
